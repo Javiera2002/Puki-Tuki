@@ -36,8 +36,3 @@ Recorridos a mano: `specs/002-aplicacion-completa/quickstart.md`.
 | `media/` | Voz en off (`audio/`), imágenes de la bienvenida y de los personajes. Los videos van en `escenas/` y `clips/`. Ver `media/README.md`. |
 | `tests/` | Pruebas automáticas de la lógica. |
 | `ACUERDOS.md` | Registro de cómo se tomaron las decisiones. La que vale es la spec. |
-
-## Antecedente que no se usa como base
-
-`_demo_001/` y `specs/001-recorrido-capitulos/` son de una demostración anterior programada
-antes de tiempo. No son decisiones aprobadas.

@@ -1,7 +1,0 @@
-const {test}=require('node:test');const assert=require('node:assert/strict');const {Answer}=require('../engine.js');
-const q={id:'q1',item:'SDQ-6',kind:'question',left:'puki',right:'tuki'};
-test('posición inicial no se confirma y centro tocado sí',()=>{const a=new Answer(q,100);assert.equal(a.finish(true,200),null);a.select(50);const r=a.finish(true,300);assert.equal(r.position,50);assert.equal(r.centerSelected,true);assert.equal(r.status,'confirmed');assert.equal(r.selectedCharacter,null);});
-test('omisión sin interacción no equivale al centro',()=>{const a=new Answer(q,0);a.present();a.present();a.present();const r=a.finish(false,100);assert.equal(r.position,null);assert.equal(r.centerSelected,null);assert.equal(r.interacted,false);assert.equal(r.presentations,3);});
-test('mover sin confirmar registra interacción pero no una elección definitiva',()=>{const a=new Answer(q);a.select(13);const r=a.finish(false);assert.equal(r.interacted,true);assert.equal(r.position,null);});
-test('solo se registra una confirmación y se conserva la última elección',()=>{const a=new Answer(q);a.select(0);a.select(100);assert.equal(a.finish(true).selectedCharacter,'tuki');assert.equal(a.finish(true),null);assert.equal(a.select(20),false);});
-test('rangos inválidos y práctica',()=>{const a=new Answer({...q,kind:'practice',item:null});assert.equal(a.select(NaN),false);a.select(-12);const r=a.finish(true);assert.equal(r.position,0);assert.equal(r.practice,true);assert.equal(r.item,null);});
