@@ -1,0 +1,9 @@
+{
+  "name": "puki-tuki",
+  "private": true,
+  "type": "module",
+  "description": "Autorreporte Puki y Tuki. Sin dependencias: abrir con un servidor de archivos estáticos.",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}

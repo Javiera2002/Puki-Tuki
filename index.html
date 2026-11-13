@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Puki y Tuki</title>
+  <link rel="stylesheet" href="estilos/app.css?v=14">
+</head>
+<body>
+  <main id="bienvenida" class="pantalla"></main>
+  <main id="guardadas" class="pantalla"></main>
+  <main id="inicio" class="pantalla"></main>
+  <main id="cuento" class="pantalla">
+    <div id="subtitulo" class="subtitulo" aria-live="polite"></div>
+    <div id="escenario" class="escenario"></div>
+    <div id="zona-pregunta" class="zona-pregunta"></div>
+    <button id="boton-pausa" class="boton-pausa" aria-label="Pausa">❚❚</button>
+  </main>
+  <main id="despedida" class="pantalla"></main>
+  <main id="informe" class="pantalla"></main>
+  <div id="pausa" class="capa-pausa"></div>
+  <div id="avisos" class="avisos"></div>
+  <div class="aviso-orientacion">Gira la tablet en horizontal 🔄</div>
+  <script type="module" src="src/main.js?v=14"></script>
+</body>
+</html>
